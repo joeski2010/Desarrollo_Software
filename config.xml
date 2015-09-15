@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
-    id        = "com.phonegap.joeski"
+    id        = "com.phonegap.desarrollo"
     version   = "1.0.0">
 
-<name>Unica</name>
+<name>Desarrollo de Software</name>
 
 <description>
-Esta es una aplicación para el exámen de admisión.
+Esta es una aplicación para el Area de Desarrollo.
 </description>
 
-<author href="https://example.com" email="you@example.com">
+<author href="https://example.com" email="espillcoquispejose@gmail.com">
 Oficina General de Tecnologia Informática y Comunicaciones.
 </author>
 
