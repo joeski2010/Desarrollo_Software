@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Plataforma Móbil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+  <meta charset="utf-8">
+<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+</script>
+ 
+ <!--FRAGMENTO DE LIBRERIAS JQUERY MOBILE 
+ <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script> 
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+<!FIN FRAGMENTO -->
+ <!--FRAGMENTO DE LIBRERIAS JQUERY MOBILE -->
+ <link rel="stylesheet" href="css/jquery.mobile-1.3.0.min.css" />
+ <link rel="stylesheet" href="css/estilos.css" />
+<script src="js/jquery.js"></script> 
+
+<script src="js/jquery.mobile-1.3.0.js"></script>
+
+<script src="js/codigo.js"></script>
+<!--FIN FRAGMENTO -->
+
+<script type=”text/javascript”>
+function descargarpdf() {
+window.open('https://docs.google.com/viewer?url=http://www.unica.edu.pe/publicacion/resultados/documentos/admision2015.pdf', '_system', 'location=yes');
+};
+
+</script>
+<script>
+function openpdf() {
+     var ref = window.open('https://docs.google.com/viewer?url=http://www.unica.edu.pe/publicacion/resultados/documentos/admision2015.pdf', '_blank', 'location=yes');
+     ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+     ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+     ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+     ref.addEventListener('exit', function(event) { alert(event.type); });
+}
+</script>
+</head>
+<body>
+<!--PRINCIPAL -->
+<div data-role="page" id="principal">
+<!--HEADER -->
+<div data-role="header" data-position="fixed" >
+
+<h1><img src="img/icon.png" width="55" height="55"></h1>
+
+<div data-role="navbar">
+<ul>
+	<li><a href="#vacantes" data-icon="start" data-theme="b">Areas</a></li>
+	<li><a href="#tasas" data-icon="check" data-theme="b">Nuestros Proyectos</a></li>
+	<li><a href="#inscripcion" data-icon="search" data-theme="b">Obejtivos</a></li>
+	<li><a href="#contacto" data-icon="info" data-theme="b">Contacto</a></li>
+
+</ul>
+</div>
+
+</div>
+<!--FIN DEL HEADER -->
+<!--CONTENIDO -->
+<div data-role="content" >
+<img src="img/ogtic.png" style="height:200px;width:100%">
+
+
+<ul data-role="listview" data-inset="true" data-split-icon="gear" data-split-theme="b">
+<li data-role="list-divider">Contenido</li>
+<li>
+<img src="img/icon.png">
+<h1>Función Básica</h1>
+<p>Administrar eficientemente las tecnologias de la información y comunicación, para contribuir el logro de los objetivos institucionales, poniendo los recursos informaticos a disposicion de los usuarios.</p>
+
+
+</li>
+
+
+</ul>
+<!---POPUP 1-->
+
+<!--FIN POPUP -->
+
+<!---POPUP 2-->
+<div data-role="popup" id="promo2" data-theme="b" class="ui-content" data-overlay-theme="b">
+<h3>Misión</h3>
+<p align="justify">Ser una universidad acreditada con liderazgo regional, nacional e internacional, por su excelencia académica e investigación científica y tecnológica, orientada a resolver prioritariamente los problemas regionales y nacionales, creando una cultura de calidad que logre una solida integración con sus graduados y sustentada en el pluralismo y responsabilidad social, promoviendo el manejo sostenible de los recursos naturales y conservación del medio ambiente.</p>
+</div>
+<!--FIN POPUP -->
+
+<!---POPUP 2-->
+<div data-role="popup" id="promo3" data-theme="b" class="ui-content" data-overlay-theme="b">
+<h3>Reseña Histórica</h3>
+<p align="justify">El origen de la Universidad Nacional “San Luis Gonzaga” de Ica se remonta a 1955, durante el gobierno del Presidente Manuel A. Odria; sin embargo nace legalmente el 20 de diciembre de 1955, por ley N° 12495, gestión del senador por Ica, Sr. Temistocles Rocha Rebata, sin embargo no funciono inmediatamente, fueron necesarias jornadas heroicas de lucha para lograr su funcionamiento, con el histórico cabildo abierto del 18 de Febrero de 1961 donde se acordó declarar fundada la Universidad Nacional “San Luis Gonzaga” de Ica.</p>
+</div>
+<!--FIN POPUP -->
+</div>
+<div data-role="footer" data-position="fixed">
+<h4>Derechos reservados. OGTIC 2015</h4>
+</div>
+<!--FIN FOOTER -->
+
+<!--INICIO PANEL1 -->
+<div data-role="panel" id="bars" data-theme="a">
+<ul data-role="listview">
+<li><a href="#vacantes" data-icon="start" data-theme="b">Areas</a></li>
+<li><a href="#tasas" data-icon="check" data-theme="b">Nuestros Proyectos</a></li>
+<li><a href="#inscripcion" data-icon="search" data-theme="b">Obejtivos</a></li>
+
+<li><a href="#contacto" data-icon="info" data-theme="b">Contacto</a></li>
+</ul>
+</div>
+<!--FIN PANEL1 -->
+<!--INICIO PANEL2 -->
+<div data-role="panel" id="search" data-position="right" data-display="push" data-theme="a">
+<ul data-role="listview" data-inset="true" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Buscar...">
+<li><a href="#vacantes" data-icon="start" data-theme="b">Sobre Nostros</a></li>
+<li><a href="#tasas" data-icon="check" data-theme="b">Nuestros Proyectos</a></li>
+<li><a href="#inscripcion" data-icon="search" data-theme="b">Obejtivos</a></li>
+
+<li><a href="#contacto" data-icon="info" data-theme="b">Contacto</a></li>
+</ul>
+</div>
+<!--FIN PANEL2 -->
+
+</div><!--FIN PAGE -->
+
+
+<!--VACANTES -->
+<div data-role="page" id="vacantes">
+<!--HEADER -->
+
+<div data-role="header" data-position="fixed" >
+<a href="#principal" data-icon="home">Inicio</a>
+<h1><img src="img/icon.png" width="55" height="55"></h1>
+
+<div data-role="navbar">
+<ul >
+<li><a href="#vacantes" data-icon="start" data-theme="b">Areas</a></li>
+<li><a href="#tasas" data-icon="check" data-theme="b">Nuestros Proyectos</a></li>
+<li><a href="#inscripcion" data-icon="search" data-theme="b">Obejtivos</a></li>
+
+<li><a href="#contacto" data-icon="info" data-theme="b">Contacto</a></li
+</ul>
+</div>
+</div>
+<!--FIN DEL HEADER -->
+<!--CONTENIDO -->
+<div data-role="content" >
+<ul data-role="listview" data-inset="true" data-split-icon="search" data-split-theme="b">
+<li data-role="list-divider">DESARROLLO DE SOFTWARE</li>
+
+
+
+<li>
+
+<h2>Analisis y Programacion de Software</h2>
+
+
+</li>
+
+<li>
+<h2>Administracion de BD</h2>
+
+</li>
+<li>
+<h2>Seguridad Informatica</h2>
+
+
+</li>
+
+<li>
+<h2>Calidad de Software</h2>
+
+
+</li>
+
+
+
+</ul>
+<!---POPUP 1 ADMINISTRACION-->
+<div data-role="popup" id="vaca1" data-theme="b" class="ui-content" data-overlay-theme="b">
+
+</div>
+<!--FIN POPUP5 -->
+</div>
+<div data-role="footer" data-position="fixed">
+<h4>Derechos reservados. OGTIC 2015</h4>
+</div>
+</div>
+<!--FIN VACANTES-->
+
+<!--TASAS -->
+<div data-role="page" id="tasas">
+<!--HEADER -->
+<div data-role="header" data-position="fixed" >
+<a href="#principal" data-icon="home">Inicio</a>
+<h1><img src="img/icon.png" width="55" height="55"></h1>
+
+<div data-role="navbar">
+<ul >
+<li><a href="#vacantes" data-icon="start" data-theme="b">Areas</a></li>
+<li><a href="#tasas" data-icon="check" data-theme="b">Nuestros Proyectos</a></li>
+<li><a href="#inscripcion" data-icon="search" data-theme="b">Obejtivos</a></li>
+
+<li><a href="#contacto" data-icon="info" data-theme="b">Contacto</a></li
+</ul>
+</div>
+</div>
+<!--FIN DEL HEADER -->
+<!--CONTENIDO -->
+<div data-role="content" >
+<h2>PROYECTOS DEL AÑO 2015</h2>
+<table data-role="table"  data-mode="columntoggle" class="ui-responsive table-stripe">	
+<thead>
+<tbody>
+<tr>
+	<th><b>NUMERO</b></th>
+	<th>NOMBRE</th> 
+	<th><b>DEPENDENCIA</b></th>
+
+</tr>
+</thead>	
+
+<tr>
+	<td>001</td>
+	<td>Sistema de Tramite Documentario</td>
+	<td>Educacion, Ing Quimic, Biologia, Odontologia</td>
+	
+</tr>
+
+<tr>
+	<td>002</td>
+	<td>Sistema de Almacen </td>
+	<td>Comedor Universitario</td>
+	
+</tr>
+
+<tr>
+   <td>003</td>
+   <td>Kobli</td>
+   <td>Facultad de Ingenieria Quimica</td>
+ 
+ </tr>
+
+<tr>
+	<td>004</td>
+	<td>Aplicativo mobil Admision 2015-I</td>
+	<td>CECA</td>
+</tr>
+
+<tr>
+	<td>005</td>
+	<td>Sistema de Egresados</td>
+	<td>facultades </td>
+</tr>
+
+<tr>
+	<td>006</td>
+	<td>Sistema de egresados</td>
+	<td>Oficina de planificacion</td>
+
+</tr>
+
+
+ </tbody>
+</table>
+
+</div>
+<div data-role="footer" data-position="fixed">
+<h4>Derechos reservados. OGTIC 2015</h4>
+</div>
+</div>
+<!--FIN TASAS-->
+
+<!--INSCRIPCION -->
+<div data-role="page" id="inscripcion">
+<!--HEADER -->
+<div data-role="header" data-position="fixed" >
+<a href="#principal" data-icon="home">Inicio</a>
+<h1><img src="img/icon.png" width="55" height="55"></h1>
+
+<div data-role="navbar">
+<ul >
+<li><a href="#vacantes" data-icon="start" data-theme="b">Areas</a></li>
+<li><a href="#tasas" data-icon="check" data-theme="b">Nuestros Proyectos</a></li>
+<li><a href="#inscripcion" data-icon="search" data-theme="b">Obejtivos</a></li>
+
+<li><a href="#contacto" data-icon="info" data-theme="b">Contacto</a></li
+</ul>
+</div>
+</div>
+<!--FIN DEL HEADER -->
+<!--CONTENIDO -->
+<div data-role="content" >
+<ul data-role="listview" data-inset="true" data-split-icon="search" data-split-theme="b">
+<li data-role="list-divider">OBJETIVOS</li>
+
+
+
+<li>
+
+<h2>Desarrolar e implementar  Software</h2>
+
+
+</li>
+
+<li>
+<h2>Capacitar a los usuarios finales </h2>
+
+</li>
+<li>
+<h2>Mantenimiento y seguimiento del Software</h2>
+
+
+</li>
+
+
+
+
+
+</ul>
+<!---POPUP 1 ADMINISTRACION-->
+<div data-role="popup" id="vaca1" data-theme="b" class="ui-content" data-overlay-theme="b">
+
+</div>
+<!--FIN POPUP5 -->
+</div>
+<div data-role="footer" data-position="fixed">
+<h4>Derechos reservados. OGTIC 2015</h4>
+</div>
+</div>
+
+<!--<div   >
+<h3> * DESARROLLAR E IMPLEMENTAR SOFTWAR: APLICATIVOS A MEDIDA EN
+LAS DIVERSAS DEPENDENCIAS DE
+LA UNIVERSIDAD.</h3> 
+
+</div>
+<div >
+<h3> * CAPACITAR A LOS USUARIOS FINALES : SOBRE LOS APLICATIVOS INSTALADOS 
+EN LAS DIVERSAS DEPENDENCIAS
+DE LA UNIVERSIDAD.</h3> 
+
+</div>
+<div  >
+<h3> * MANTENIMIENTO Y SEGUIMIENTO DEL SOFTWARE:CONSTANTE A LOS DIVERSOS SISTEMAS INSTALADOS
+EN LA DIVERSAS DEPENDENCIAS
+DE LA UNIVERSIDAD.</h3>  -->
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed">
+<h4>Derechos reservados. OGTIC 2015</h4>
+</div>
+</div>
+<!--FIN INSCRIPCION-->
+
+<!--RESULTADOS -->
+<div data-role="page" id="resultados">
+<!--HEADER -->
+<div data-role="header" data-position="fixed" >
+<a href="#principal" data-icon="home">Inicio</a>
+<h1><img src="img/icon.png" width="55" height="55"></h1>
+
+<div data-role="navbar">
+<ul >
+<li><a href="#vacantes" data-icon="start" data-theme="b">Areas</a></li>
+<li><a href="#tasas" data-icon="check" data-theme="b">Nuestros Proyectos</a></li>
+<li><a href="#inscripcion" data-icon="search" data-theme="b">Obejtivos</a></li>
+
+<li><a href="#contacto" data-icon="info" data-theme="b">Contacto</a></li
+</ul>
+</div>
+</div>
+<!--FIN DEL HEADER -->
+<!--CONTENIDO -->
+<div data-role="content" >
+<div data-role="collapsible" data-theme="b">
+<h3>RESULTADOS</h3>
+<center><img src="img/img-result.png"></center> 
+<p align="justify">Los resultados del presente exámen de admisión seran publicados aquí, el día 09 de Agosto del presente año.</p>
+
+
+<a href="javascript:openpdf()" rel="external" data-role="button" data-theme="e">VER RESULTADOS</a>
+
+<form action="http://www.unica.edu.pe/publicacion/resultados/php/consultar_estudiantes.php" id="form" method="post" data-ajax="false">
+        <label>Consultar</label>
+        <input type="numeric" id="txtGrupo" name="txtGrupo" maxlength="8" required>
+        <input type="button" id="btnConsultar" value="Consultar">
+        </form>	
+
+</div>
+
+    <!-- Mostrar resultado de la consulta -->
+    <div id="mostrarDatos">
+    	<ul data-role="listview" data-theme="a" id="listaDatos">
+    	</ul>
+    </div>
+
+
+
+</div>
+<div data-role="footer" data-position="fixed">
+<h4>Derechos reservados. OGTIC 2015</h4>
+</div>
+</div>
+<!--FIN RESULTADOS-->
+
+<!--CONTACTO -->
+<div data-role="page" id="contacto">
+<!--HEADER -->
+<div data-role="header" data-position="fixed" >
+<a href="#principal" data-icon="home">Inicio</a>
+<h1><img src="img/icon.png" width="55" height="55"></h1>
+
+<div data-role="navbar">
+<ul >
+<li><a href="#vacantes" data-icon="start" data-theme="b">Areas</a></li>
+<li><a href="#tasas" data-icon="check" data-theme="b">Nuestros Proyectos</a></li>
+<li><a href="#inscripcion" data-icon="search" data-theme="b">Obejtivos</a></li>
+
+<li><a href="#contacto" data-icon="info" data-theme="b">Contacto</a></li
+</ul>
+</div>
+</div>
+<!--FIN DEL HEADER -->
+
+<!--CONTENIDO -->
+<div data-role="content" >
+<div data-role="collapsible" data-theme="b">
+<h3>Dirección</h3><p align="justify"> Ciudad Universitaria S/N (Oficina de tecnologia de la información)</p>
+ </div>
+ <div data-role="collapsible" data-theme="b">
+<h3>Correo</h3> desarrollodesoftware@outlook.com
+ </div>
+<div data-role="collapsible" data-theme="b">
+<h3>Telefono</h3> 056-211176 
+</div>
+<div data-role="collapsible" data-theme="b">
+<h3>Ubicación</h3>
+<img src="img/ubicacion.jpg" alt="" width="100%" height="300" frameborder="0" style="border:0">
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed">
+<h4>Derechos reservados. OGTIC 2015</h4>
+</div>
+</div>
+<!--FIN CONTACTO-->
+
+
+</body>
+</html>
